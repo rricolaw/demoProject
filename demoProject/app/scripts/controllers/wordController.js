@@ -3,16 +3,13 @@
 
   angular
     .module('demoProjectApp', [
+
     ]).controller('wordController', function($scope,$http) {
 
-    $scope.hello ="johnson";
+    $http.get('http://localhost:3000/employee').success(function(response){
 
-    alert("Hi nishant");
+      $scope.employees = response;
 
-    $http.get('word.json').success(function(response){
-
-      $scope.myWords = response;
-      
       console.log(response);
 
     });

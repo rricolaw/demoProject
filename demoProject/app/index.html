@@ -50,36 +50,33 @@
 
 
     <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="input-group search-bar">
-            <input type="text">
+    <div ng-view="">
 
 
-            <ul>
-              <li ng-repeat="word in myWords"></li>
+    </div>
 
-              <li>{{word.abandon}}</li>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="input-group search-bar">
+              <input type="text">
+
+
+              <ul  ng-repeat="employee in employees">
+
+
+                <li>{{employee.first_name}}</li>
 
 
 
-
-            </ul>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
 
-    <div class="container">
-    <div ng-view=""></div>
-    </div>
-
-    <div class="footer">
-      <div class="container">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
-      </div>
-    </div>
 
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
